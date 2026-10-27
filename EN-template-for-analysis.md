@@ -1,13 +1,12 @@
 **Date**<br>
-**Course Code & Course Name**<br>
-**Student's First Name & Last Name**<br>
-**Presented to Jean-Sébastien Marier**<br>
+MPAD 2003 - Introductory Data Storytelling<br>
+Emma Maxwell<br>
+Jean-Sébastien Marier<br>
 
-# Deliverable 2: Exploratory Data Analysis (EDA)
-
-Use one hashtag symbol (`#`) to create a level 1 heading like this one.
+# Artifical Intelligence Is Giving Us Trust Issues
 
 ## Foreword
+The intent with this article is to connect the relevance of society's current trust in the media and the role that Artifical Intelligence is playing in that. My hope is to open the eyes of all generations to the harm that AI is doing within the media sphere, and subsequently, our trust. 
 
 For this assignment, you must clean and analyze the dataset from Deliverable 1, create exploratory charts/visualizations, and identify a potential story. Your assignment must clearly detail your process. You are expected to write about 1,000-1,200 words, and to include several screen captures showing the different steps you went through. Your assignment must be written with the Markdown format and submitted on GitHub.
 
