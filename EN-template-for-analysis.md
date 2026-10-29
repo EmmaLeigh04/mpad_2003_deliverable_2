@@ -48,7 +48,11 @@ While there are many ways to import a dataset directly from a webpage using func
 
 The dataset is configured into a table with 13 coloumns and 102 rows of input. The columns are organized by year, region, question being given to each respondant, response with a scale, group type, sub-group type, percent (percent of what you may ask, that we will find out), 95lcl (lower confidence level), 95ucl (upper confidence level), language, and objectID. From and initial glance, the data looks very messy; there's submissions in both French and English, data is organized into groups and then subgroups of that, some categories are hard to decifer what they really mean or equate to, like the percent column. Overall, the data is quite hard to follow along and make logical at the moment. 
 
+The "response" category contains ordinal variables consisting of 3 different response ranges; weak/faible (0-4), moderate/moderee (5-7), and strong/forte (8-10). These are the scores that the respondant gave on how much they trust the news and information from the media currently. 
+The "group" category is organized as nominal variables, describing demographic of the respondants who submitted the response. These groups are categorized as Age, disability status/ status d'incapacite, education level/ niveau de scolarite le plus eleve atteint, gender/genre, race/ identite raciale, and overall/ total toutes les personnes. 
+The "percent" column contains continuous numerical variables. They are percentages between 0 and 100, but there is no quantifiable logic being given about what the percent is telling us. Is it the percent of how many people from the specific group chose that response range? It can't be the percent of how many respondants chose that answer, because the total of the 102 inputs doesn't equal up to 100. 
 
+One thing I am questioning at the moment is whether every entry is in both english and french, or if they are french or english depending on where the respondant group was from. 
 
 ## 2. Understanding Data
 
