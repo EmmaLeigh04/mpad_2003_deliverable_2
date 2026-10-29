@@ -1,3 +1,4 @@
+`#000000`
 **Date**<br>
 MPAD 2003 - Introductory Data Storytelling<br>
 Emma Maxwell<br>
@@ -21,7 +22,7 @@ Did you notice how to create a hyperlink? In Markdown, we put the clickable text
 
 And to create an unordered list, we simply put a star (`*`) before each item.
 
-## 1. Getting Data
+## Getting Data
 
 Use two hashtag symbols (`##`) to create a level 2 heading like this one.
 
@@ -40,6 +41,14 @@ To include a screen capture, use the sample code below. Your images should be sa
 =IMPORTHTML("https://en.wikipedia.org/wiki/China"; "table", 5)
 ```
 This also shows how to create an ordered list. Simply put `1.` before each item.
+
+This assignment is dedicated to analyzing a dataset from Ottawa's open data website. The dataset I'm looking at is titled ["Trust in Media"](https://open.ottawa.ca/datasets/ottawa::trust-in-media/about) and displays the level of trust respondants have in the news and information that they are consuming through the media. 
+
+While there are many ways to import a dataset directly from a webpage using functions like IMPORTAHTML or IMPORTDATA, I found that the only way to import this table, due to it being sourced from Ottawa's open data webpage, was to use the built in import function from Google Sheets. To do this you open a new sheet file, go to the file tab on the top left, click the third option, import data; from there you can select a file from multiple options, I chose to upload it from my computer. Once you open that file, google sheets will ask you if you would like to select the location of the sheet and the seperator type. I chose to insert the new sheet and detect automatically. The sheet is now imported and will look something like Photo #1. 
+
+The dataset is configured into a table with 13 coloumns and 102 rows of input. The columns are organized by year, region, question being given to each respondant, response with a scale, group type, sub-group type, percent (percent of what you may ask, that we will find out), 95lcl (lower confidence level), 95ucl (upper confidence level), language, and objectID. From and initial glance, the data looks very messy; there's submissions in both French and English, data is organized into groups and then subgroups of that, some categories are hard to decifer what they really mean or equate to, like the percent column. Overall, the data is quite hard to follow along and make logical at the moment. 
+
+
 
 ## 2. Understanding Data
 
