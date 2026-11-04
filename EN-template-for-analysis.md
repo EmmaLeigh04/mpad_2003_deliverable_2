@@ -56,13 +56,17 @@ The "percent" column contains continuous numerical variables. They are percentag
 One thing I am questioning at the moment is whether every entry is in both english and french, or if they are french or english depending on where the respondant group was from. 
 
 ## 2. Understanding Data
-
 ### 2.1. VIMO Analysis
 
 Use three hashtag symbols (`###`) to create a level 3 heading like this one. Please follow this template when it comes to level 1 and level 2 headings. However, you can use level 3 headings as you see fit.
 
 VIMO analysis: Valid, Invalid, Missing and Outlier values.
 
+After a brief analysis of the "response" category's comlumn stats, I determined that the column is all valid. It contains 6 unique values, all of which add up to 102, being the total value of rows in the dataset. No cells are invalid, missing or have any outliers.
+
+The "group" column is mostly valid, with a couple outlier values. While there are some differences between values of all groups, the "overall" group has a significantly lower value than the rest. There are only 3 "overall" entries while everything else averages around 8.5. Besides this, there are no missing or invalid cells. 
+
+The "percent" category is also mostly valid. There are 49 unique values which makes sense because the values are continuous numerical variables. What makes this more interesting though is that there are two outlier values, meaning there are two percent values that repeat. One of the outlier values is 14.1, repeating twice. One of the entries was for the group "disability status" with the response of strong(8-10), the other being "education level" with the response also being strong(8-10). The other value is 51.5, also repeating twice. One entry for "education level" with the response being moderate(5-7), the other being "race" with the response of moderate(5-7). There are no missing or invalid cells. 
 
 
 Support your claims by citing relevant sources. Please follow [APA guidelines for in-text citations](https://apastyle.apa.org/style-grammar-guidelines/citations).
@@ -96,6 +100,8 @@ I find the first two columns, Region and Question, too wordy and overwhelming wh
 I will do the same for the Question column but remove the part that says "-where 0 means 'not at all' and 10 means 'completely'-" instead. 
 The columns will now read as "Ottawa-Gatineau, Ontario/Quebec" and "On a scale of 0 to 10 to what extent do you generally trust the news or information you receive from the media?". 
 <br>![](/Photos/photo10.png)<br>
+
+
 
 
 
