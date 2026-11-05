@@ -58,30 +58,22 @@ One thing I am questioning at the moment is whether every entry is in both engli
 ## 2. Understanding Data
 ### 2.1. VIMO Analysis
 
-Use three hashtag symbols (`###`) to create a level 3 heading like this one. Please follow this template when it comes to level 1 and level 2 headings. However, you can use level 3 headings as you see fit.
-
-VIMO analysis: Valid, Invalid, Missing and Outlier values.
-
 After a brief analysis of the "response" category's comlumn stats, I determined that the column is all valid. It contains 6 unique values, all of which add up to 102, being the total value of rows in the dataset. No cells are invalid, missing or have any outliers.
 
 The "group" column is mostly valid, with a couple outlier values. While there are some differences between values of all groups, the "overall" group has a significantly lower value than the rest. There are only 3 "overall" entries while everything else averages around 8.5. Besides this, there are no missing or invalid cells. 
 
-The "percent" category is also mostly valid. There are 49 unique values which makes sense because the values are continuous numerical variables. What makes this more interesting though is that there are two outlier values, meaning there are two percent values that repeat. One of the outlier values is 14.1, repeating twice. One of the entries was for the group "disability status" with the response of strong(8-10), the other being "education level" with the response also being strong(8-10). The other value is 51.5, also repeating twice. One entry for "education level" with the response being moderate(5-7), the other being "race" with the response of moderate(5-7). There are no missing or invalid cells. 
-
-
-Support your claims by citing relevant sources. Please follow [APA guidelines for in-text citations](https://apastyle.apa.org/style-grammar-guidelines/citations).
-
-**For example:**
-
-As seen in Bounegru & Gray (2011), a data visualization should be clear...
+The "percent" category is also mostly valid. There are 49 unique values which makes sense because the values are continuous numerical variables. What makes this more interesting though is that there are two outlier values, meaning there are two percent values that repeat. 
+<br> ![](/Photos/photo11.png)<br>
+One of the outlier values is 14.1%, repeating four times (two per language). One of the entries was for the group "disability status" with the response of strong(8-10), the other being "education level" with the response also being strong(8-10). The other value is 51.5%, also repeating four times (two per language). One entry for "education level" with the response being moderate(5-7), the other being "race" with the response of moderate(5-7). There are no missing or invalid cells. 
 
 ### 2.2. Cleaning Data
 
 The first thing I do whenever I clean a data set is freeze the top row where all of the column headers live. This allows me to scroll down the sheet and still be able to see which columns are which. To do this, I click on 1:1 and it will highlight the entire first row. 
 <br>![](/Photos/photo2.png)<br>
-While that row is hightlighted, I then go to view > freeze > 1 row. This freezes the whole row. While the row is still highlighted, I am also going to apply a filter to it. While it is highlighted, go to Data > Create A Filter. Now first row is now frozen and has a filtering system applied to it.
+While that row is hightlighted, I then go to `View > Freeze > 1 Row`. This freezes the whole row. While the row is still highlighted, I am also going to apply a filter to it. While it is highlighted, go to Data > Create A Filter. Now first row is now frozen and has a filtering system applied to it.
 
-The next thing I am going to do it delete a couple of columns that I don't need. I'm going to get rid of the year, because this dataset is strictly from 2024; data_quality and Notes because both columns are full of empty values; Language and ObjectId. To do this I click on the desired column, we'll take the language column as an example which would be A:A. This will highlight the entire column similar to what we did to freeze the first row. 
+The next thing I am going to do it delete a couple of columns that I don't need. I'm going to get rid of the "Year", because this dataset is strictly from 2024; "data_quality" and "Notes", because both columns are full of empty values; "Language", "ObjectId", "F95lcl" and "F95ucl" because these will not be useful to my story. 
+To do this I click on the desired column, we'll take the language column as an example which would be A:A. This will highlight the entire column similar to what we did to freeze the first row. 
 <br>![](/Photos/photo4.png)<br>
 I then right click over the column while it is highlighted which will show a pop up screen. I then locate the "delete column" button to delete the column.
 
@@ -95,30 +87,27 @@ I will now simply select all of the 51 rows and delete them. When I turn the fil
 <br>![](/Photos/photo8.png) <br>
 I will also manually delete all of the french parts for each header. The dataset is now only 51 rows long.
 
-I find the first two columns, Region and Question, too wordy and overwhelming when looking at the dataset, so I am going to cut out segments of all the cells. To do this, I will select the entire column once again and use COMMAND-SHIFT-H (on mac) to use the find and replace feature on google sheets. For the region column, I will put "Ontario part," into the 'find' bar and keep the 'replace with' bar empty. Then click on the replace all button at the bottom. 
+I find the first two columns, Region and Question, too wordy and overwhelming when looking at the dataset, so I am going to cut out segments of all the cells. To do this, I will select the entire column once again and use `COMMAND-SHIFT-H` (on mac) to use the find and replace feature on google sheets. For the region column, I will put "Ontario part," into the 'find' bar and keep the 'replace with' bar empty. Then click on the replace all button at the bottom. 
 <br>![](/Photos/photo9.png)<br>
 I will do the same for the Question column but remove the part that says "-where 0 means 'not at all' and 10 means 'completely'-" instead. 
 The columns will now read as "Ottawa-Gatineau, Ontario/Quebec" and "On a scale of 0 to 10 to what extent do you generally trust the news or information you receive from the media?". 
 <br>![](/Photos/photo10.png)<br>
 
+The last thing I want to do is add percentage signs to the end of each number in the "percent" column. To do this I go to `Format > Number > Custom number format`. I then put `#.##"%"` into the custom number format bar and select apply to format all the cells in the column. 
+<br>![](/Photos/photo12.png)<br>
 
-
-
-
+The cleaning is now complete and the datasheet now looks like this: 
+<br>![](/Photos/photo13.png)<br>
 
 ### 2.3. Analyzing Data
 
-Insert text here.
+I created a pivot table that organizes all the data from the "Group", "Sub_Group", "Response" and "Percent" columns. The pivot table looks like this: 
+<br> ![](/Photos/PivotTable.png)<br>
+I chose these variables because they are the most valuable components of the dataset. It breaks down each group into their sub groups, and then the percent of how many people chose a specific response range within that sub-group. Some statistics I found while analyzing this pivot table is that the age group of people between 15-34yrs old has the smallest percent of Strong(8-10) responses within the Age category, coming in at 6.8% of respondents. Alternatively, the age range between 65-74yrs has the highest percent of strong(8-10) responses with a 30.4%. People between 35-44yrs has the largest Weak(0-4) response percent, 39.4%, and people between 75-older have the largest moderate(5-7) response percent, 62%. These statistics are the most interesting to me as it will be what I focus on throughout the story I'll be writing. 
+I then created an exploratory chart with the data from this pivot table. This is what the chart looks like: 
+<br> ![](/Photos/chart.png)<br>
 
-**This section should include a screen capture of your pivot table, like so:**
-
-![](pivot-table-screen-capture.png)<br>
-*Figure 2: This pivot table shows...*
-
-**This section should also include a screen capture of your exploratory chart, like so:**
-
-![](chart-screen-capture.png)<br>
-*Figure 3: This exploratory chart shows...*
+The stacked bar chart lets us visualize how the fewest amount of people in each group respond strongely, and the largest amount of people respond moderately. This means thats fewer and fewer people have a strong amount of trust in the news and information coming from media sources. 
 
 ## 3. Delivering Data
 
@@ -127,6 +116,13 @@ Insert text here.
 ## 4. References
 
 Include a list of your references here. Please follow [APA](https://apastyle.apa.org/style-grammar-guidelines/references) or [MLA](https://www.mla.org/MLA-Style) guidelines for references. Hanging paragraphs aren't required though.
+
+* Government of Canada, S.C. (2020, September 23). *Data accuracy and validation: Methods to ensure the quality of data*. Government of Canada, Statistics Canada. [https://www.statcan.gc.ca/en/wtc/data-literacy/catalogue/892000062020008](https://www.statcan.gc.ca/en/wtc/data-literacy/catalogue/892000062020008)
+
+* Marier, J.S. (2026). *Video: Cleaning Data in Google Sheets*, Carleton University, Brightspace.[https://brightspace.carleton.ca/d2l/le/content/451355/viewContent/4810867/View](https://brightspace.carleton.ca/d2l/le/content/451355/viewContent/4810867/View) 
+
+* Government of Canada, S.C. (2021, September 2). *Data Visualization, 5.2 Bar Chart*. Government of Canada, Statistics Canada. [https://www150.statcan.gc.ca/n1/edu/power-pouvoir/ch9/bargraph-diagrammeabarres/5214818-eng.htm](https://www150.statcan.gc.ca/n1/edu/power-pouvoir/ch9/bargraph-diagrammeabarres/5214818-eng.htm)
+
 
 **Here's an example:**
 
